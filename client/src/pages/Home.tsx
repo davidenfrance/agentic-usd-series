@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { articles, seriesIntroduction } from "@/lib/articles";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, Clock } from "lucide-react";
+import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 
 export default function Home() {
   return (
@@ -145,10 +146,16 @@ export default function Home() {
                       >
                         {article.summary}
                       </p>
-                      <div className="flex items-center gap-2 text-[#C9A84C] text-sm font-medium group-hover:gap-3 transition-all duration-300" style={{ fontFamily: "var(--font-ui)" }}>
-                        <BookOpen className="w-4 h-4" />
-                        Read Article
-                        <ArrowRight className="w-4 h-4" />
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-[#C9A84C] text-sm font-medium group-hover:gap-3 transition-all duration-300" style={{ fontFamily: "var(--font-ui)" }}>
+                          <BookOpen className="w-4 h-4" />
+                          Read Article
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                        <div className="flex items-center gap-1 text-white/50 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
+                          <Clock className="w-4 h-4" />
+                          {formatReadingTime(calculateReadingTime(article))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -160,35 +167,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-[#0f0f1e] border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p
-            className="text-[#C9A84C] tracking-[0.2em] uppercase text-xs mb-4"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
+      <footer className="py-12 bg-[#0f0f1e] border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-[#C9A84C] tracking-[0.2em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-ui)" }}>
             The Agentic USD Imperative
           </p>
-          <p
-            className="text-white/50 text-sm"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
+          <p className="text-white/50 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
             By David Parsons and Jonny Fry &middot; 2025
           </p>
         </div>
       </footer>
-
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }

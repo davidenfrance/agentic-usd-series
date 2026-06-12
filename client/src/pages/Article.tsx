@@ -1,7 +1,8 @@
 import { useParams, Link } from "wouter";
 import { articles } from "@/lib/articles";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import TableOfContents from "@/components/TableOfContents";
+import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 import { useMemo } from "react";
 
 export default function Article() {
@@ -16,6 +17,12 @@ export default function Article() {
       heading: section.heading,
       id: `section-${index}`,
     }));
+  }, [article]);
+
+  // Calculate reading time
+  const readingTime = useMemo(() => {
+    if (!article) return 0;
+    return calculateReadingTime(article);
   }, [article]);
 
   if (!article) {
@@ -76,11 +83,16 @@ export default function Article() {
           >
             {article.subtitle}
           </p>
-          <div className="mt-6 flex items-center gap-4">
+          <div className="mt-6 flex items-center gap-4 flex-wrap">
             <div className="h-[1px] w-12 bg-[#C9A84C]" />
             <p className="text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
               David Parsons & Jonny Fry
             </p>
+            <div className="h-[1px] w-12 bg-[#C9A84C]" />
+            <div className="flex items-center gap-1 text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
+              <Clock className="w-4 h-4" />
+              {formatReadingTime(readingTime)}
+            </div>
           </div>
         </div>
       </section>
