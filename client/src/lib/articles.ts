@@ -10,6 +10,9 @@ export interface Article {
 export interface Section {
   heading: string;
   content: string[];
+  image?: string;
+  imageCaption?: string;
+  imagePosition?: 'left' | 'right' | 'full';
 }
 
 export const articles: Article[] = [
@@ -227,7 +230,10 @@ export const articles: Article[] = [
           "A Double-Backed sovereign stablecoin operates on two layers of collateralization. The first layer ensures GENIUS compliance: each token is backed 1:1 by US Treasury securities, maintaining the dollar peg and satisfying the regulatory requirements that will govern legal tender stablecoins.",
           "The second layer provides additional security and national economic benefit: each token is further collateralized by tokenized UK property assets. This creates a yield-bearing instrument that generates returns from both US Treasury yields and UK property income (rental yields, capital appreciation).",
           "This dual structure means that even in extreme stress scenarios - where one layer of collateral faces pressure - the other provides a safety net. The result is a stablecoin that is more robust than pure Agentic USD while offering superior returns to holders."
-        ]
+        ],
+        image: "/manus-storage/double_backed_stablecoin_2_574c3919.png",
+        imageCaption: "The Double-Backed Architecture: Dual collateralization combining GENIUS-compliant USD backing with tokenized national property assets.",
+        imagePosition: "full"
       },
       {
         heading: "Tokenizing National Property",
@@ -235,7 +241,10 @@ export const articles: Article[] = [
           "The tokenization of UK property for use as stablecoin collateral requires a comprehensive legal and technological framework. Property rights must be represented as digital tokens on a distributed ledger, with clear legal recognition of token holders' claims.",
           "Key elements include a National Property Registry on-chain, standardized tokenization protocols for different property classes, automated yield distribution from rental income and capital gains, and regulatory frameworks ensuring transparency and investor protection.",
           "This tokenization process transforms illiquid, location-bound assets into programmable, globally accessible digital collateral - unlocking value that has been trapped in traditional property markets for centuries."
-        ]
+        ],
+        image: "/manus-storage/double_backed_stablecoin_1_9eed70d1.png",
+        imageCaption: "Tokenized Property Collateral: Real-world assets transformed into programmable digital tokens backing sovereign stablecoins.",
+        imagePosition: "full"
       },
       {
         heading: "Reclaiming Fiscal Sovereignty",
@@ -243,7 +252,10 @@ export const articles: Article[] = [
           "The Double-Backed solution addresses each of the challenges identified in this series. It competes with Agentic USD on yield and stability, retaining domestic savings within the national economic system. It provides HM Treasury with a mechanism to finance government operations through a competitive digital instrument. It maintains visibility through sovereign control of the issuance and monitoring infrastructure.",
           "Most critically, it transforms the threat of dollarization into an opportunity: by issuing a superior product that leverages unique national assets, the UK can position itself not as a victim of the Agentic USD revolution but as a leader in the next generation of sovereign digital finance.",
           "The future of national economic sovereignty in the digital age will belong to those nations bold enough to innovate - to look back at the wisdom of 1696 and forward to the possibilities of tokenized property, creating a bridge between historical financial innovation and the demands of an AI-driven, digitally native global economy."
-        ]
+        ],
+        image: "/manus-storage/double_backed_stablecoin_3_d1624f4c.png",
+        imageCaption: "The Roman-Agentic Vision: Ancient monetary efficiency meets modern digital sovereignty through tokenized property and AI-driven finance.",
+        imagePosition: "full"
       }
     ]
   }

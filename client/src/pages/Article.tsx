@@ -111,6 +111,26 @@ export default function Article() {
                     </p>
                   ))}
                 </div>
+                {/* Section Image */}
+                {section.image && (
+                  <div className="mt-10 rounded-sm overflow-hidden shadow-lg">
+                    <img
+                      src={section.image}
+                      alt={section.imageCaption}
+                      className="w-full h-auto"
+                    />
+                    {section.imageCaption && (
+                      <div className="bg-[#F5F5F0] p-6 border-t border-[#E0E0D5]">
+                        <p
+                          className="text-[#1B2A4A]/70 text-sm italic"
+                          style={{ fontFamily: "var(--font-body)" }}
+                        >
+                          {section.imageCaption}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
                 {sIndex < article.sections.length - 1 && (
                   <div className="mt-12 flex items-center gap-4">
                     <div className="h-[1px] flex-1 bg-[#C9A84C]/20" />
