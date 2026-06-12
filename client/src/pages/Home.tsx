@@ -17,13 +17,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/60 to-[#1A1A2E]/90" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <p
-            className="text-[#C9A84C] tracking-[0.3em] uppercase text-sm mb-6 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]"
+            className="text-[#C9A84C] tracking-[0.3em] uppercase text-sm mb-6"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             A Five-Part Series by David Parsons & Jonny Fry
           </p>
           <h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.4s_forwards]"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6"
             style={{ fontFamily: "var(--font-display)" }}
           >
             The Agentic USD
@@ -31,7 +31,7 @@ export default function Home() {
             <span className="text-[#C9A84C]">Imperative</span>
           </h1>
           <p
-            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]"
+            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10"
             style={{ fontFamily: "var(--font-body)" }}
           >
             How Central Banks and State Treasuries must prepare for the inevitable
@@ -39,14 +39,14 @@ export default function Home() {
           </p>
           <a
             href="#introduction"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#C9A84C] text-[#1A1A2E] font-semibold rounded-sm hover:bg-[#d4b65c] transition-colors duration-200 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.8s_forwards]"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#C9A84C] text-[#1A1A2E] font-semibold rounded-sm hover:bg-[#d4b65c] transition-colors duration-200"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             Begin Reading <ArrowRight className="w-4 h-4" />
           </a>
         </div>
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-[fadeInUp_0.8s_ease-out_1.2s_forwards]">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <div className="w-[1px] h-12 bg-white/40 mx-auto mb-2" />
           <p className="text-white/50 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-ui)" }}>
             Scroll
