@@ -1,11 +1,22 @@
 import { useParams, Link } from "wouter";
 import { articles } from "@/lib/articles";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import TableOfContents from "@/components/TableOfContents";
+import { useMemo } from "react";
 
 export default function Article() {
   const params = useParams<{ id: string }>();
   const articleId = parseInt(params.id || "1", 10);
   const article = articles.find((a) => a.id === articleId);
+
+  // Generate TOC sections with IDs
+  const tocSections = useMemo(() => {
+    if (!article) return [];
+    return article.sections.map((section, index) => ({
+      heading: section.heading,
+      id: `section-${index}`,
+    }));
+  }, [article]);
 
   if (!article) {
     return (
@@ -29,6 +40,9 @@ export default function Article() {
 
   return (
     <div className="min-h-screen">
+      {/* Table of Contents Sidebar */}
+      <TableOfContents sections={tocSections} />
+
       {/* Hero */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-end overflow-hidden">
         <div
@@ -93,7 +107,7 @@ export default function Article() {
           {/* Sections */}
           <div className="space-y-16">
             {article.sections.map((section, sIndex) => (
-              <div key={sIndex}>
+              <div key={sIndex} id={`section-${sIndex}`} className="scroll-mt-20">
                 <h2
                   className="text-3xl md:text-4xl font-bold text-[#1B2A4A] mb-6 leading-tight"
                   style={{ fontFamily: "var(--font-display)" }}
