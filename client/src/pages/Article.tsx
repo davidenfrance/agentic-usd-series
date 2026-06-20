@@ -14,10 +14,17 @@ export default function Article() {
   // Generate TOC sections with IDs
   const tocSections = useMemo(() => {
     if (!article) return [];
-    return article.sections.map((section, index) => ({
-      heading: section.heading,
-      id: `section-${index}`,
-    }));
+    const sections = [
+      {
+        heading: "Executive Summary",
+        id: "executive-summary",
+      },
+      ...article.sections.map((section, index) => ({
+        heading: section.heading,
+        id: `section-${index}`,
+      })),
+    ];
+    return sections;
   }, [article]);
 
   // Calculate reading time
@@ -133,7 +140,7 @@ export default function Article() {
       <section className="py-16 md:py-24 bg-[#FAFAF5]" id="article-hero">
         <div className="max-w-3xl mx-auto px-6" id="article-content">
           {/* Executive Summary */}
-          <div className="mb-16 p-8 bg-white border-l-4 border-[#C9A84C] shadow-sm">
+          <div className="mb-16 p-8 bg-white border-l-4 border-[#C9A84C] shadow-sm" id="executive-summary">
             <p
               className="text-[#C9A84C] tracking-[0.15em] uppercase text-xs mb-3 font-semibold"
               style={{ fontFamily: "var(--font-ui)" }}
