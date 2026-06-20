@@ -197,15 +197,15 @@ export default function Article() {
                 </div>
                 {/* Section Image */}
                 {section.image && (
-                  <div className="mt-10 rounded-sm overflow-hidden shadow-lg">
+                  <div className="mt-8 mb-8 bg-white rounded-lg p-6 shadow-sm border border-[#E8E8E0]">
                     <img
                       src={section.image}
                       alt={section.imageCaption}
-                      className="w-full h-auto"
+                      className="w-full h-auto rounded"
                     />
                     {section.imageCaption && (
                       <p
-                        className="mt-4 text-sm text-[#1B2A4A]/60 italic"
+                        className="mt-4 text-sm text-[#1B2A4A]/60 italic text-center"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {section.imageCaption}
