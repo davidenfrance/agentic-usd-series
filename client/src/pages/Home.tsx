@@ -20,7 +20,7 @@ export default function Home() {
             className="text-[#C9A84C] tracking-[0.3em] uppercase text-sm mb-6"
             style={{ fontFamily: "var(--font-ui)" }}
           >
-            A Five-Part Series by David Parsons & Jonny Fry
+            A Five-Part Series by David Parsons, Jonny Fry & Antony Abell
           </p>
           <h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6"
@@ -108,7 +108,7 @@ export default function Home() {
 
           <div className="space-y-8">
             {articles.map((article, index) => (
-              <Link key={article.id} href={`/article/${article.id}`}>
+              <Link key={article.id} href={`/article/${article.id}`} onClick={() => window.scrollTo(0, 0)}>
                 <article className="group relative overflow-hidden rounded-sm bg-[#242444] hover:bg-[#2a2a50] transition-all duration-300 cursor-pointer">
                   <div className="flex flex-col md:flex-row">
                     {/* Image */}
@@ -170,7 +170,7 @@ export default function Home() {
             The Agentic USD Imperative
           </p>
           <p className="text-white/50 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
-            By David Parsons and Jonny Fry &middot; 2025
+            By David Parsons, Jonny Fry & Antony Abell &middot; 2026
           </p>
         </div>
       </footer>

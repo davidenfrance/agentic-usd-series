@@ -87,7 +87,7 @@ export default function Article() {
           <div className="mt-6 flex items-center gap-4 flex-wrap mb-8">
             <div className="h-[1px] w-12 bg-[#C9A84C]" />
             <p className="text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
-              David Parsons & Jonny Fry
+              David Parsons, Jonny Fry & Antony Abell
             </p>
             <div className="h-[1px] w-12 bg-[#C9A84C]" />
             <div className="flex items-center gap-1 text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
