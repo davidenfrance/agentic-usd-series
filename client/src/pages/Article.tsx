@@ -46,34 +46,62 @@ export default function Article() {
   const prevArticle = articles.find((a) => a.id === articleId - 1);
   const nextArticle = articles.find((a) => a.id === articleId + 1);
 
+  // Function to render paragraph with clickable reference links
+  const renderParagraphWithReferences = (paragraph: string, key: string | number) => {
+    const parts = paragraph.split(/(\[\d+\])/);
+    return (
+      <p
+        key={key}
+        className="text-[#1B2A4A]/80 text-[1.1rem] leading-[1.85]"
+        style={{ fontFamily: "var(--font-body)" }}
+      >
+        {parts.map((part, i) => {
+          const refMatch = part.match(/\[(\d+)\]/);
+          if (refMatch) {
+            return (
+              <a
+                key={i}
+                href="#references"
+                className="text-[#C9A84C] hover:underline font-semibold cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const refSection = document.getElementById("references");
+                  if (refSection) {
+                    refSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                {part}
+              </a>
+            );
+          }
+          return part;
+        })}
+      </p>
+    );
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Table of Contents Sidebar */}
-      <TableOfContents sections={tocSections} />
+      {/* Hero Section */}
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(27, 42, 74, 0.85) 0%, rgba(201, 168, 76, 0.15) 100%)`,
+          backgroundColor: "#1B2A4A",
+        }}
+      >
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#C9A84C] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C9A84C] rounded-full blur-3xl" />
+        </div>
 
-      {/* Hero */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-end overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${article.heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-[#1A1A2E]/50 to-transparent" />
-        {/* Back button */}
-        <Link href="/">
-          <span className="absolute top-6 left-6 z-20 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white/90 text-sm rounded-sm hover:bg-white/20 transition-colors cursor-pointer" style={{ fontFamily: "var(--font-ui)" }}>
-            <ArrowLeft className="w-4 h-4" /> Back to Series
-          </span>
-        </Link>
-        {/* Title overlay */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 pb-16 w-full">
-          <p
-            className="text-[#C9A84C] tracking-[0.2em] uppercase text-xs mb-4"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
-            Article {String(article.id).padStart(2, "0")} of 05
+        <div className="relative z-10 max-w-3xl mx-auto px-6 py-20 text-center">
+          <p className="text-[#C9A84C] tracking-[0.15em] uppercase text-xs mb-6 font-semibold" style={{ fontFamily: "var(--font-ui)" }}>
+            Article {article.id}
           </p>
           <h1
-            className="text-4xl md:text-6xl font-bold text-white leading-tight mb-3"
+            className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {article.title}
@@ -84,7 +112,7 @@ export default function Article() {
           >
             {article.subtitle}
           </p>
-          <div className="mt-6 flex items-center gap-4 flex-wrap mb-8">
+          <div className="mt-6 flex items-center gap-4 flex-wrap mb-8 justify-center">
             <div className="h-[1px] w-12 bg-[#C9A84C]" />
             <p className="text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
               David Parsons, Jonny Fry & Antony Abell
@@ -131,15 +159,9 @@ export default function Article() {
                   {section.heading}
                 </h2>
                 <div className="space-y-5">
-                  {section.content.map((paragraph, pIndex) => (
-                    <p
-                      key={pIndex}
-                      className="text-[#1B2A4A]/80 text-[1.1rem] leading-[1.85]"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
+                  {section.content.map((paragraph, pIndex) =>
+                    renderParagraphWithReferences(paragraph, `${sIndex}-${pIndex}`)
+                  )}
                 </div>
                 {/* Section Image */}
                 {section.image && (
@@ -150,86 +172,88 @@ export default function Article() {
                       className="w-full h-auto"
                     />
                     {section.imageCaption && (
-                      <div className="bg-[#F5F5F0] p-6 border-t border-[#E0E0D5]">
-                        <p
-                          className="text-[#1B2A4A]/70 text-sm italic"
-                          style={{ fontFamily: "var(--font-body)" }}
-                        >
-                          {section.imageCaption}
-                        </p>
-                      </div>
+                      <p
+                        className="mt-4 text-sm text-[#1B2A4A]/60 italic"
+                        style={{ fontFamily: "var(--font-body)" }}
+                      >
+                        {section.imageCaption}
+                      </p>
                     )}
-                  </div>
-                )}
-                {sIndex < article.sections.length - 1 && (
-                  <div className="mt-12 flex items-center gap-4">
-                    <div className="h-[1px] flex-1 bg-[#C9A84C]/20" />
-                    <div className="w-2 h-2 rotate-45 bg-[#C9A84C]/40" />
-                    <div className="h-[1px] flex-1 bg-[#C9A84C]/20" />
                   </div>
                 )}
               </div>
             ))}
           </div>
+
+          {/* References Section */}
+          <div id="references" className="mt-20 pt-16 border-t-2 border-[#C9A84C]/20">
+            <h2
+              className="text-3xl font-bold text-[#1B2A4A] mb-8"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              References
+            </h2>
+            <div className="space-y-4">
+              {article.references?.map((ref, index) => (
+                <div key={index} className="flex gap-4">
+                  <span className="text-[#C9A84C] font-semibold flex-shrink-0">[{index + 1}]</span>
+                  <p
+                    className="text-[#1B2A4A]/75 text-sm leading-relaxed"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    {ref}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Navigation */}
-      <section className="py-16 bg-[#1A1A2E]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-6 justify-between">
+      <section className="py-16 bg-[#1B2A4A]">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex items-center justify-between">
             {prevArticle ? (
               <Link href={`/article/${prevArticle.id}`}>
-                <div className="group flex-1 p-6 bg-[#242444] rounded-sm hover:bg-[#2a2a50] transition-colors cursor-pointer">
-                  <p className="text-white/50 text-xs uppercase tracking-wider mb-2" style={{ fontFamily: "var(--font-ui)" }}>
-                    <ArrowLeft className="w-3 h-3 inline mr-1" /> Previous
-                  </p>
-                  <p className="text-white font-semibold group-hover:text-[#C9A84C] transition-colors" style={{ fontFamily: "var(--font-display)" }}>
-                    {prevArticle.title}
-                  </p>
-                </div>
+                <span
+                  className="flex items-center gap-2 text-[#C9A84C] hover:text-[#E8C547] cursor-pointer transition"
+                  style={{ fontFamily: "var(--font-ui)" }}
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                  Previous Article
+                </span>
               </Link>
             ) : (
-              <div className="flex-1" />
+              <div />
             )}
+            <Link href="/">
+              <span
+                className="text-white/60 hover:text-white cursor-pointer transition"
+                style={{ fontFamily: "var(--font-ui)" }}
+              >
+                Back to Series
+              </span>
+            </Link>
             {nextArticle ? (
               <Link href={`/article/${nextArticle.id}`}>
-                <div className="group flex-1 p-6 bg-[#242444] rounded-sm hover:bg-[#2a2a50] transition-colors cursor-pointer text-right">
-                  <p className="text-white/50 text-xs uppercase tracking-wider mb-2" style={{ fontFamily: "var(--font-ui)" }}>
-                    Next <ArrowRight className="w-3 h-3 inline ml-1" />
-                  </p>
-                  <p className="text-white font-semibold group-hover:text-[#C9A84C] transition-colors" style={{ fontFamily: "var(--font-display)" }}>
-                    {nextArticle.title}
-                  </p>
-                </div>
+                <span
+                  className="flex items-center gap-2 text-[#C9A84C] hover:text-[#E8C547] cursor-pointer transition"
+                  style={{ fontFamily: "var(--font-ui)" }}
+                >
+                  Next Article
+                  <ArrowRight className="w-5 h-5" />
+                </span>
               </Link>
             ) : (
-              <Link href="/">
-                <div className="group flex-1 p-6 bg-[#242444] rounded-sm hover:bg-[#2a2a50] transition-colors cursor-pointer text-right">
-                  <p className="text-white/50 text-xs uppercase tracking-wider mb-2" style={{ fontFamily: "var(--font-ui)" }}>
-                    Return <ArrowRight className="w-3 h-3 inline ml-1" />
-                  </p>
-                  <p className="text-white font-semibold group-hover:text-[#C9A84C] transition-colors" style={{ fontFamily: "var(--font-display)" }}>
-                    Back to Series Overview
-                  </p>
-                </div>
-              </Link>
+              <div />
             )}
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-[#0f0f1e] border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-[#C9A84C] tracking-[0.2em] uppercase text-xs mb-3" style={{ fontFamily: "var(--font-ui)" }}>
-            The Agentic USD Imperative
-          </p>
-          <p className="text-white/50 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
-            By David Parsons and Jonny Fry &middot; 2025
-          </p>
-        </div>
-      </footer>
+      {/* Table of Contents Sidebar */}
+      <TableOfContents sections={tocSections} />
     </div>
   );
 }
