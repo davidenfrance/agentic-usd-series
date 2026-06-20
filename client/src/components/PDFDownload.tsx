@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import html2pdf from "html2pdf.js";
 
 interface PDFDownloadProps {
   articleTitle: string;
@@ -9,85 +10,74 @@ interface PDFDownloadProps {
 export default function PDFDownload({ articleTitle, articleId }: PDFDownloadProps) {
   const handleDownloadPDF = async () => {
     try {
-      // Create a simple HTML document with the article content
-      const htmlContent = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="UTF-8">
-          <title>${articleTitle}</title>
-          <style>
-            body {
-              font-family: 'Lora', serif;
-              line-height: 1.8;
-              max-width: 8.5in;
-              margin: 0.5in;
-              color: #1B2A4A;
-            }
-            h1 {
-              font-family: 'Cormorant Garamond', serif;
-              font-size: 2.5em;
-              margin-bottom: 0.5em;
-              color: #1A1A2E;
-            }
-            h2 {
-              font-family: 'Cormorant Garamond', serif;
-              font-size: 1.8em;
-              margin-top: 1.5em;
-              margin-bottom: 0.5em;
-              color: #1A1A2E;
-            }
-            .header {
-              border-bottom: 2px solid #C9A84C;
-              padding-bottom: 1em;
-              margin-bottom: 2em;
-            }
-            .footer {
-              margin-top: 3em;
-              padding-top: 1em;
-              border-top: 1px solid #C9A84C;
-              font-size: 0.9em;
-              color: #666;
-            }
-            p {
-              margin-bottom: 1em;
-              text-align: justify;
-            }
-            .reference {
-              margin-left: 2em;
-              margin-bottom: 0.5em;
-              font-size: 0.95em;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="header">
-            <h1>The Agentic USD Imperative</h1>
-            <p><strong>${articleTitle}</strong></p>
-            <p>By David Parsons & Jonny Fry</p>
-          </div>
-          
-          <p><em>This PDF was generated from the article series on Agentic USD and its implications for central banks and state treasuries.</em></p>
-          
-          <div class="footer">
-            <p><strong>About This Series:</strong> A comprehensive five-part analysis exploring how Central Banks and State Treasuries must prepare for the inevitable dollarization of their economies through Agentic USD stablecoins.</p>
-            <p>Published by London Digital Escrow</p>
-            <p>Generated: ${new Date().toLocaleDateString()}</p>
-          </div>
-        </body>
-        </html>
-      `;
+      // Get the article content from the DOM
+      const contentElement = document.getElementById("article-content");
+      const heroElement = document.getElementById("article-hero");
+      
+      if (!contentElement) {
+        console.error("Article content not found");
+        return;
+      }
 
-      // Create a blob and download
-      const blob = new Blob([htmlContent], { type: "text/html" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `Article-${articleId}-${articleTitle.replace(/\s+/g, "-").toLowerCase()}.html`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      // Create a container for the PDF content
+      const pdfContent = document.createElement("div");
+      pdfContent.style.padding = "40px";
+      pdfContent.style.fontFamily = "'Lora', serif";
+      pdfContent.style.lineHeight = "1.8";
+      pdfContent.style.color = "#1B2A4A";
+
+      // Add header
+      const header = document.createElement("div");
+      header.style.borderBottom = "2px solid #C9A84C";
+      header.style.paddingBottom = "20px";
+      header.style.marginBottom = "30px";
+      header.innerHTML = `
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5em; margin: 0 0 10px 0; color: #1A1A2E;">
+          The Agentic USD Imperative
+        </h1>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8em; margin: 0 0 15px 0; color: #1A1A2E;">
+          ${articleTitle}
+        </h2>
+        <p style="margin: 0 0 10px 0; font-size: 1em;"><strong>By David Parsons & Jonny Fry</strong></p>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Generated: ${new Date().toLocaleDateString()}</p>
+      `;
+      pdfContent.appendChild(header);
+
+      // Clone and add the article content
+      const contentClone = contentElement.cloneNode(true) as HTMLElement;
+      contentClone.style.marginTop = "20px";
+      pdfContent.appendChild(contentClone);
+
+      // Add footer
+      const footer = document.createElement("div");
+      footer.style.marginTop = "40px";
+      footer.style.paddingTop = "20px";
+      footer.style.borderTop = "1px solid #C9A84C";
+      footer.style.fontSize = "0.9em";
+      footer.style.color = "#666";
+      footer.innerHTML = `
+        <p><strong>About This Series:</strong> A comprehensive five-part analysis exploring how Central Banks and State Treasuries must prepare for the inevitable dollarization of their economies through Agentic USD stablecoins.</p>
+        <p>Published by London Digital Escrow</p>
+        <p>© 2026 David Parsons & Jonny Fry. All rights reserved.</p>
+      `;
+      pdfContent.appendChild(footer);
+
+      // Configure PDF options
+      const options: any = {
+        margin: 10,
+        filename: `Article-${articleId}-${articleTitle.replace(/\s+/g, "-").toLowerCase()}.pdf`,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { 
+          orientation: "portrait", 
+          unit: "mm", 
+          format: "a4",
+          compress: true
+        }
+      };
+
+      // Generate PDF
+      html2pdf().set(options).from(pdfContent).save();
     } catch (error) {
       console.error("Error downloading PDF:", error);
     }

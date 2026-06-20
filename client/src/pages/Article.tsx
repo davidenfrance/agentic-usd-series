@@ -102,8 +102,8 @@ export default function Article() {
       </section>
 
       {/* Article Content */}
-      <section className="py-16 md:py-24 bg-[#FAFAF5]">
-        <div className="max-w-3xl mx-auto px-6">
+      <section className="py-16 md:py-24 bg-[#FAFAF5]" id="article-hero">
+        <div className="max-w-3xl mx-auto px-6" id="article-content">
           {/* Executive Summary */}
           <div className="mb-16 p-8 bg-white border-l-4 border-[#C9A84C] shadow-sm">
             <p
