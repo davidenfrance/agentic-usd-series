@@ -52,7 +52,10 @@ export const articles: Article[] = [
         content: [
           "In the face of this impending dollarisation, a critical first step for HM Treasury and the Bank of England is to systematically identify and quantify the \"at-risk\" transaction volumes within the UK economy. Key areas of vulnerability include cross-border transactions, large-value settlements, digital commerce and fintech, corporate treasury management, and investment and savings.",
           "To quantify these risks, the Bank of England and HM Treasury must leverage advanced data analytics, potentially employing network analysis techniques similar to those used in cybersecurity or intelligence gathering. The goal is to develop a comprehensive \"vulnerability map\" of the UK's financial system."
-        ]
+        ],
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/blindfolded-central-banker-95B3qxWAFWX7Q6NB57SVmQ.webp",
+        imageCaption: "The Visibility Crisis: A blindfolded Central Banking Authority navigates an increasingly complex digital financial landscape dominated by Agentic USD flows, blockchain networks, and autonomous AI agents. The traditional oversight mechanisms of central banks are rendered ineffective in a world where economic activity migrates to decentralized, pseudonymous digital rails.",
+        imagePosition: "full"
       },
       {
         heading: "The Imperative for Proactive Defense",
