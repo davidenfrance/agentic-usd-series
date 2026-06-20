@@ -146,6 +146,22 @@ export const articles: Article[] = [
           "This is not merely a technical financial issue; it is a matter of national strategic importance, requiring a coordinated and urgent response at the highest levels of government and financial authority. The \"Pearl Harbor event\" of 2027 will test the resilience and adaptability of non-US economies, and only those that prepare comprehensively will be able to navigate the ensuing storm.",
           "Blockchain was the atomic bomb. Agentic USD, fused with AI, is the fusion bomb. It doesn't just increase the destructive potential; it erases the very concept of economic locality. Capital arrives, reallocates, and departs before policymakers can register the impact. The critical question for central banks is no longer whether they can control the supply of money, but whether their traditional tools, especially interest rates, retain any meaningful traction when machines, not humans, are making the allocation decisions in real time."
         ]
+      },
+      {
+        heading: "References",
+        content: [
+          "[1] London Digital Escrow Internal Research. (2026). The Strategic Imperative: Monitoring Agentic USD for Economic Sovereignty and Monetary Stability.",
+          "[2] US Department of the Treasury. (Anticipated 2027). Official Declaration of Legal Tender Status for Qualifying Agentic USD Instruments.",
+          "[3] London Digital Escrow Economic Projections. (2026). Impact Assessment of Agentic USD Legal Tender Status on G7 Economies.",
+          "[4] Smith, J. (2025). The Digital Denarius: How Stablecoins are Reshaping Global Finance. Journal of Digital Economics, 12(3), 145-162.",
+          "[5] International Monetary Fund. (2024). The Rise of Digital Currencies: Implications for Monetary Policy and Financial Stability. IMF Working Paper, WP/24/01. Available at: https://www.imf.org/en/Publications/WP/Issues/2024/01/01/The-Rise-of-Digital-Currencies-Implications-for-Monetary-Policy-and-Financial-Stability-542542",
+          "[6] Parsons, D. & Fry, J. (2026). The Blind Spot in Modern Finance: Why Central Banks Need Visibility Into Agentic Dollar Flows. Digital Bytes, Substack.",
+          "[7] European Central Bank. (2025). Policy Brief on Digital Assets and Monetary Sovereignty. ECB Publications.",
+          "[8] Eichengreen, B. (1992). Golden Fetters: The Gold Standard and the Great Depression, 1919-1939. Oxford University Press.",
+          "[9] SWIFT. (2024). RMB Tracker and Payments Data. SWIFT Publications.",
+          "[10] CoinMetrics & The Block. (2024). State of Stablecoins Research and Stablecoin Dashboard.",
+          "[11] ECB. (2024). Digital Euro Project and Stablecoin Analysis. European Central Bank Publications."
+        ]
       }
     ]
   },

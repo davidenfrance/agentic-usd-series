@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { articles } from "@/lib/articles";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import TableOfContents from "@/components/TableOfContents";
+import PDFDownload from "@/components/PDFDownload";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 import { useMemo } from "react";
 
@@ -83,7 +84,7 @@ export default function Article() {
           >
             {article.subtitle}
           </p>
-          <div className="mt-6 flex items-center gap-4 flex-wrap">
+          <div className="mt-6 flex items-center gap-4 flex-wrap mb-8">
             <div className="h-[1px] w-12 bg-[#C9A84C]" />
             <p className="text-white/60 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
               David Parsons & Jonny Fry
@@ -93,6 +94,9 @@ export default function Article() {
               <Clock className="w-4 h-4" />
               {formatReadingTime(readingTime)}
             </div>
+          </div>
+          <div className="mt-6">
+            <PDFDownload articleTitle={article.title} articleId={article.id} />
           </div>
         </div>
       </section>
