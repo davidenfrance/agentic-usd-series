@@ -3,8 +3,10 @@ import { articles } from "@/lib/articles";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import TableOfContents from "@/components/TableOfContents";
 import PDFDownload from "@/components/PDFDownload";
+import GlossaryTooltip from "@/components/GlossaryTooltip";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 import { useMemo } from "react";
+import { getAllTerms } from "@/lib/glossary";
 
 export default function Article() {
   const params = useParams<{ id: string }>();
@@ -53,9 +55,11 @@ export default function Article() {
   const prevArticle = articles.find((a) => a.id === articleId - 1);
   const nextArticle = articles.find((a) => a.id === articleId + 1);
 
-  // Function to render paragraph with clickable reference links
+  // Function to render paragraph with clickable reference links and glossary tooltips
   const renderParagraphWithReferences = (paragraph: string, key: string | number) => {
+    const glossaryTerms = getAllTerms();
     const parts = paragraph.split(/(\[\d+\])/);
+    
     return (
       <p
         key={key}
@@ -82,7 +86,28 @@ export default function Article() {
               </a>
             );
           }
-          return part;
+          
+          // Check for glossary terms in the text
+          const words = part.split(/(\s+)/);
+          return (
+            <span key={i}>
+              {words.map((word, wordIndex) => {
+                const cleanWord = word.replace(/[^a-zA-Z\s-]/g, '');
+                const isGlossaryTerm = glossaryTerms.some(
+                  (term) => term.toLowerCase() === cleanWord.toLowerCase()
+                );
+                
+                if (isGlossaryTerm && word.trim()) {
+                  return (
+                    <GlossaryTooltip key={`${i}-${wordIndex}`} term={cleanWord}>
+                      {word}
+                    </GlossaryTooltip>
+                  );
+                }
+                return word;
+              })}
+            </span>
+          );
         })}
       </p>
     );
