@@ -375,7 +375,7 @@ export const articles: Article[] = [
           "By the late 2010s and early 2020s, the limitations of AI-assisted systems became apparent [5]. Even with AI doing the analytical work, human approval remained a bottleneck. Targets could still escape in the time it took to obtain human authorization. Military strategists recognized that the only way to achieve true speed was to eliminate the human decision-maker entirely. The solution was AI-in-command warfare [3].",
           "In AI-in-command systems, AI identifies targets, calculates engagement sequences, and executes strikes autonomously. Humans are relegated to execution of AI decisions. In the case of drone operations, pilots are told where to fly and what to strike. They execute the AI-determined sequence. Humans retain only execution authority, not decision authority. This represents a fundamental inversion of command structure."
         ],
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-human-to-ai-evolution-m57S3DtsEVrHHYk6t73aps.webp",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-human-to-ai-evolution-hc-J9RUrD8Ub3vJ8UR5jQvg6z.webp",
         imageCaption: "Evolution from human-in-the-loop to AI-in-command across drone warfare and financial systems. Speed acceleration from hours to milliseconds.",
         imagePosition: "full"
       },
@@ -399,7 +399,7 @@ export const articles: Article[] = [
           "By the 2020s, the next evolution was inevitable: Agentic USD [8]. AI agents make autonomous financial decisions without human approval or even human awareness. These agents identify opportunities for capital deployment, calculate optimal allocation sequences, and execute transactions at machine speed. Central banks and treasuries are told what is happening by markets, not the reverse. Monetary policy has become reactive to AI-driven capital flows [1].",
           "The parallel to AI-in-command warfare is exact. Just as AI systems direct pilots to execute predetermined strike sequences, AI agents direct capital flows to execute predetermined allocation sequences. Just as pilots have no authority to deviate from AI-determined targets, central banks have no authority to prevent AI-determined capital flows. Just as the speed of warfare is determined by AI processing speed, the speed of financial flows is determined by AI processing speed. Humans retain execution authority—central banks can adjust interest rates or deploy capital controls—but they do not control the strategic direction of capital movement."
         ],
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-parallel-threats-gyLMFQTbbbvEKhQnZPPsY5.webp",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-parallel-threats-hc-9ZhSpmSB4qQy5vPUNdEZAx.webp",
         imageCaption: "Parallel characteristics of drone warfare and Agentic USD: both operate at machine speed with AI autonomy, eroding sovereignty and enabling plausible deniability.",
         imagePosition: "full"
       },
@@ -424,7 +424,7 @@ export const articles: Article[] = [
           "Agentic USD operates faster than traditional monetary policy can respond [8]. AI agents identify opportunities in milliseconds. Capital allocation sequences are calculated in milliseconds. Transactions are executed in milliseconds. By the time central banks recognize what is happening, capital flows are already in progress. The speed of the attack exceeds the speed of the defense [1].",
           "The fundamental problem is that you cannot defend against a threat you cannot see, operating at machine speed, that is technically legal. Agentic USD adoption may be controversial, but it is technically legal. Capital controls cannot prevent it. The only defense is to develop monetary policy tools that operate at machine speed, which requires AI-in-command monetary policy systems. This creates an arms race in AI-driven financial systems."
         ],
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-defense-paradox-speed-4JVaP3Unpd3i7m83LRbGUk.webp",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-defense-paradox-speed-hc-FBUGyisRsm8zXsLvnf55Kr.webp",
         imageCaption: "Speed mismatch: AI attacks complete 4,375+ cycles before first human defense response. Traditional defenses are 43,750x slower than AI-driven attacks.",
         imagePosition: "full"
       },
@@ -437,7 +437,7 @@ export const articles: Article[] = [
           "Nations that develop AI-competitive capabilities gain the ability to deter aggression through strength. They can match speed with speed, intelligence with intelligence. They can build resilient, AI-native systems that operate independently of external infrastructure. They can preserve sovereignty and security.",
           "Nations that fail to develop these capabilities face a grim future. They will be outmatched at machine speed. Their systems will be overwhelmed or manipulated. They will lose economic sovereignty and security. They will become permanently subordinate to whichever power controls both financial and military AI systems."
         ],
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-defense-paradox-escalation-trap-JtQ7xk7oBWccrLUESMXbrT.webp",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-defense-paradox-escalation-trap-hc-NT8zCFEG6fVZ8YiPZXw7Vm.webp",
         imageCaption: "The escalation trap: traditional defenses fail, requiring AI-competitive capabilities. The binary choice is between developing equivalent AI systems or accepting defeat.",
         imagePosition: "full"
       },
@@ -450,7 +450,7 @@ export const articles: Article[] = [
           "Phase 3: Kinetic Action (Month 12+). With the target nation economically destabilized and socially fractured, kinetic operations commence. Drone strikes target military infrastructure. The target nation's military is weakened by budget cuts resulting from fiscal crisis. Air defenses are degraded. The nation cannot respond effectively to drone strikes. Rapid military defeat follows.",
           "This convergence scenario is not theoretical. It represents a logical extension of existing hybrid warfare doctrine. It combines financial warfare with kinetic warfare. It exploits the speed advantage of AI systems in both domains. It is devastating because it attacks both the economic and military capacity of the target nation simultaneously."
         ],
-        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-convergence-scenario-nDZbn2BJDEQqg5hoiCGMre.webp",
+        image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article6-convergence-scenario-hc-5BiuWDPD5PPZUjNvgi4cos.webp",
         imageCaption: "Three-phase convergence scenario: financial infiltration weakens economy, destabilization erodes military capacity, kinetic action achieves rapid victory.",
         imagePosition: "full"
       },
