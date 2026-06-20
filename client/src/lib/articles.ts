@@ -199,7 +199,7 @@ export const articles: Article[] = [
     id: 3,
     title: "The Sovereign Debt Trap",
     subtitle: "How Agentic USD Drains National Liquidity",
-    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article3-hero-8Ky9Lq2hN3jKpQrS4tUvWx.webp",
+    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article3-hero-gq6b36HkTxburF2SxSVxqr.webp",
     summary: "The migration of domestic savings into US Treasury-backed stablecoins creates a crowding out effect for local bonds like Gilts, resulting in rising borrowing costs and a fiscal sustainability crisis. This article examines the fiscal implications of Agentic USD adoption for sovereign debt markets.",
     sections: [
       {
@@ -248,7 +248,7 @@ export const articles: Article[] = [
     id: 4,
     title: "Strategic Monitoring",
     subtitle: "Reclaiming Visibility in a Decentralized Economy",
-    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article4-hero-MnOpQrStUvWxYzAbCdEfGh.webp",
+    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article4-hero-kG9F5d3CuCEPiMNUn4jp3o.webp",
     summary: "Central banks must develop advanced on-chain analytics and network mapping capabilities to maintain visibility into Agentic USD flows and preserve financial stability. This article outlines the technical and institutional requirements for effective monitoring of digital financial infrastructure.",
     sections: [
       {
@@ -298,7 +298,7 @@ export const articles: Article[] = [
     id: 5,
     title: "The Double-Backed Solution",
     subtitle: "Tokenizing the Nation for a GENIUS-Compliant Future",
-    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article5-hero-IjKlMnOpQrStUvWxYzAbCd.webp",
+    heroImage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663302847091/MXy6CDFnqWez7ocRVRb3ET/article5-hero-FwRxwuRQn3Mk28wwDve5CN.webp",
     summary: "State Treasuries must issue sovereign, Double-Backed USD stablecoins that are GENIUS-compliant and collateralized by tokenized national property to preserve national wealth and reclaim fiscal autonomy. This article proposes a strategic response to Agentic USD dominance.",
     sections: [
       {
