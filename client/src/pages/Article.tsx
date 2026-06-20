@@ -1,9 +1,9 @@
 import { useParams, Link } from "wouter";
 import { articles } from "@/lib/articles";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
-import TableOfContents from "@/components/TableOfContents";
 import PDFDownload from "@/components/PDFDownload";
 import GlossaryTooltip from "@/components/GlossaryTooltip";
+import TableOfContents from "@/components/TableOfContents";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 import { useMemo } from "react";
 import { getAllTerms } from "@/lib/glossary";
@@ -242,6 +242,9 @@ export default function Article() {
         </div>
       </section>
 
+      {/* Table of Contents Sidebar */}
+      <TableOfContents sections={tocSections} />
+
       {/* Navigation */}
       <section className="py-16 bg-[#1B2A4A]">
         <div className="max-w-3xl mx-auto px-6">
@@ -283,9 +286,6 @@ export default function Article() {
           </div>
         </div>
       </section>
-
-      {/* Table of Contents Sidebar */}
-      <TableOfContents sections={tocSections} />
     </div>
   );
 }
