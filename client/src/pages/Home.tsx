@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { articles, seriesIntroduction } from "@/lib/articles";
+import { articles } from "@/lib/articles";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
 
@@ -68,25 +68,22 @@ export default function Home() {
               className="text-4xl md:text-5xl font-bold text-[#1B2A4A] leading-tight mb-2"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              {seriesIntroduction.title}
+              The Agentic USD Imperative
             </h2>
             <p
               className="text-xl text-[#1B2A4A]/70 italic"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              {seriesIntroduction.subtitle}
+              A comprehensive five-part analysis
             </p>
           </div>
           <div className="space-y-6">
-            {seriesIntroduction.content.map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-[#1B2A4A]/85 text-lg leading-relaxed"
-                style={{ fontFamily: "var(--font-body)" }}
-              >
-                {paragraph}
-              </p>
-            ))}
+            <p
+              className="text-[#1B2A4A]/85 text-lg leading-relaxed"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              This series explores how Central Banks and State Treasuries must prepare for the inevitable dollarization of their economies through Agentic USD stablecoins. From the initial strategic shock of legal tender status to the final solution of Double-Backed, property-collateralized stablecoins, these articles provide a comprehensive roadmap for national economic defense in the digital age.
+            </p>
           </div>
         </div>
       </section>
