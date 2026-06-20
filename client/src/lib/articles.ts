@@ -145,9 +145,9 @@ export const articles: Article[] = [
       {
         heading: "References",
         content: [
-          "[1] London Digital Escrow Internal Research. (2026). The Strategic Imperative: Monitoring Agentic USD for Economic Sovereignty and Monetary Stability.",
-          "[2] US Department of the Treasury. (Anticipated 2027). Official Declaration of Legal Tender Status for Qualifying Agentic USD Instruments.",
-          "[3] London Digital Escrow Economic Projections. (2026). Impact Assessment of Agentic USD Legal Tender Status on G7 Economies.",
+          "[1] 2tokens.org. (2024). USD Stablecoins: Not Legal Tender Yet. Available at: https://www.2tokens.org/blog/usd-stablecoins-not-legal-tender-yet?categoryId=422111",
+          "[2] 2tokens.org. (2024). USD Stablecoins: Not Legal Tender Yet. Available at: https://www.2tokens.org/blog/usd-stablecoins-not-legal-tender-yet?categoryId=422111",
+          "[3] London Digital Escrow Internal Research. (2026). The Strategic Imperative: Monitoring Agentic USD for Economic Sovereignty and Monetary Stability.",
           "[4] Smith, J. (2025). The Digital Denarius: How Stablecoins are Reshaping Global Finance. Journal of Digital Economics, 12(3), 145-162.",
           "[5] International Monetary Fund. (2024). The Rise of Digital Currencies: Implications for Monetary Policy and Financial Stability. IMF Working Paper, WP/24/01. Available at: https://www.imf.org/en/Publications/WP/Issues/2024/01/01/The-Rise-of-Digital-Currencies-Implications-for-Monetary-Policy-and-Financial-Stability-542542",
           "[6] Parsons, D. & Fry, J. (2026). The Blind Spot in Modern Finance: Why Central Banks Need Visibility Into Agentic Dollar Flows. Digital Bytes, Substack.",
