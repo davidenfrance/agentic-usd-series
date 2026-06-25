@@ -20,7 +20,7 @@ export default function Home() {
             className="text-[#C9A84C] tracking-[0.3em] uppercase text-sm mb-6"
             style={{ fontFamily: "var(--font-ui)" }}
           >
-            A Five-Part Series by David Parsons, Jonny Fry & Antony Abell
+            The Agentic US Dollar Series by David Parsons, Jonny Fry & Antony Abell
           </p>
           <h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6"
@@ -74,7 +74,7 @@ export default function Home() {
               className="text-xl text-[#1B2A4A]/70 italic"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              A comprehensive five-part analysis
+              A comprehensive seven-part analysis
             </p>
           </div>
           <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function Home() {
               className="text-4xl md:text-5xl font-bold text-white leading-tight"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Five Articles. One Imperative.
+              Seven Articles. One Imperative.
             </h2>
           </div>
 
