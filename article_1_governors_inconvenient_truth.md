@@ -37,9 +37,11 @@ If money is a good store of value, people will hoard it (hold it rather than spe
 
 This tension is resolved through a principle that economists call the **"velocity of money."** Money must circulate at a relatively uniform rate. If all units of money circulate at the same speed, then the tension between store of value and medium of exchange is manageable.
 
+Consider the British pound sterling. When you receive £100 in salary, you spend it on groceries, rent, utilities, and entertainment. The same £100 might be spent five or six times per month, circulating through the economy. This uniform velocity allows the Bank of England to predict how much money is needed in the economy, set appropriate interest rates, and manage inflation.
+
 But what happens if you introduce yield-bearing money?
 
-## The Yield Problem
+## The Yield Problem: When Money Becomes an Investment
 
 Imagine that the Bank of England issued two types of pounds:
 
@@ -59,9 +61,28 @@ Now, imagine that both are accepted as legal tender. What happens?
 
 Gresham's Law tells us: **"Bad money drives out good money."** But in this case, "bad" means "low-yield" and "good" means "high-yield." Corporations and individuals would hoard Type B (the yield-bearing version) and spend Type A (the regular version).
 
+Let's trace through a concrete example. Suppose you're the Chief Financial Officer of a major UK corporation. You have £10 million in cash that you need to hold for operational purposes. You can either:
+
+1. Hold it in Regular Sterling earning 0% yield
+2. Hold it in Yield-Bearing Sterling earning 5% yield
+
+The choice is obvious. You move your £10 million to Yield-Bearing Sterling. At 5% annual yield, that's £500,000 per year in additional revenue. Why would you not do this?
+
+But now consider what happens across the entire economy. Every corporation, every institution, every individual with discretionary cash makes the same decision. Yield-Bearing Sterling gets hoarded. Regular Sterling gets spent.
+
 This creates a bifurcated monetary system. You have two different monies with two different economic properties. The central bank loses control of the money supply. Interest rate policy becomes ineffective. Tax collection becomes impossible. The banking system collapses.
 
-This is not theoretical. This is not a hypothetical scenario. This is exactly what happened when the US GENIUS Act was modified to allow yield pass-through on stablecoins.
+This is not theoretical. This is not a hypothetical scenario. This is exactly what will happen when the US GENIUS Act is inevitably modified to allow yield pass-through on stablecoins—a change that regulators and industry observers expect within the next 18-24 months as pressure from USD stablecoin issuers mounts.
+
+## The Velocity Crisis
+
+When money bifurcates into competing yields, velocity becomes unpredictable. The Bank of England's models assume that money circulates at a relatively stable rate. This allows them to forecast inflation, set interest rates, and manage liquidity.
+
+But with competing yields, velocity becomes chaotic. High-yield money is held (low velocity). Low-yield money is spent (high velocity). The average velocity becomes unpredictable. The central bank's models break down.
+
+Consider inflation targeting. The Bank of England targets 2% inflation. This target is based on the quantity theory of money: MV = PQ, where M is money supply, V is velocity, P is price level, and Q is quantity of goods. If the central bank knows M and V, it can predict P (inflation).
+
+But if V becomes unpredictable because of competing yields, the entire framework collapses. The central bank might think it's controlling inflation, but it's actually flying blind.
 
 ## Why Andrew Bailey Is Right (And Why Nobody Listens)
 
@@ -70,6 +91,10 @@ Bailey has been warning about this for years. In his speeches, he has consistent
 He is absolutely correct.
 
 The problem is that Bailey is fighting against technology. And technology, as we will see in this series, always wins.
+
+Moreover, Bailey's warnings face a credibility problem. The financial industry has successfully framed stablecoins as "innovation" and "progress." Anyone who warns against them is portrayed as a Luddite, a technophobe, or someone opposed to financial inclusion.
+
+But Bailey isn't opposed to innovation. He's warning about a specific problem: monetary fragmentation. And that problem is real, even if it's unpopular to discuss.
 
 ## The Historical Precedent
 
@@ -85,13 +110,21 @@ The key insight: **Newton used technology to enforce monetary singularity.**
 
 But here's the twist that we'll explore in next week's article: **The same technology that once enforced singularity is now destroying it.**
 
+## The Central Banking Paradox
+
+This reveals a fundamental paradox in central banking. Central banks have always relied on technological superiority to enforce monetary singularity. Newton used reeded coins. Modern central banks use digital signatures and cryptographic verification.
+
+But now, the technology that was supposed to enforce singularity is being used to create fragmentation. Blockchain technology allows anyone to create competing currencies. Cryptographic verification allows multiple issuers to create competing stablecoins. The same tools that central banks used to enforce control are now being used to undermine it.
+
+This is the core problem that Bailey is grappling with. The technological foundation of monetary control has been inverted. Technology that was once a tool for enforcing singularity is now a tool for creating fragmentation.
+
 ## What Comes Next
 
 This series will explore a paradox at the heart of modern monetary policy. It will show how Andrew Bailey's arguments for monetary singularity are theoretically sound but practically impossible to implement. It will demonstrate how technology has made singularity obsolete.
 
 But first, we need to understand the historical precedent. We need to understand how Newton solved the problem of competing currencies. And we need to understand why his solution, elegant as it was, cannot work in the digital age.
 
-**Next week: "They Clipped the Coins, We're Clipping the Currency: The Newton Precedent Nobody's Talking About"**
+**Next week: "They Clipped the Coins: Newton's Great Recoinage and the Birth of Trusted Money"**
 
 In that article, we'll examine the Great Recoinage of 1696 in detail. We'll see how Newton's technological solution enforced monetary singularity for 330 years. And we'll begin to understand why that same technology—the power to create superior money—is now creating the opposite problem.
 
